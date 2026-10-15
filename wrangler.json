@@ -1,0 +1,24 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "govisit",
+  "main": "src/index.ts",
+  "compatibility_date": "2024-10-15",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "kliplink-db",
+      "database_id": "57fb62ed-c237-4196-97ee-7541fbc05fcd"
+    }
+  ],
+  "vars": {
+    "APP_NAME": "KlipLink",
+    "ADMIN_USERNAME": "admin",
+    "REQUIRE_AUTH_TO_CREATE": "false"
+  }
+}
